@@ -1,0 +1,78 @@
+Перегрузка метода.
+Сигнатура метода — это имя метода плюс параметры (причем порядок параметров имеет значение).
+Перегрузка метода заключается в следующем — вы создаете метод с таким же именем, но с другим набором параметров.
+Влияние изменения сигнатуры:
+Имя мы поменять не можем, тк это уже не будет перегрузкой.
+Параметры можем менять(их количество), но есть ограничения.
+
+public double summa(double x1) {
+    return x1 ;
+}
+ 
+public double summa(double y1, int y2) {
+    return y1 + y2;
+}
+этот пример будет работать.
+
+
+public double summa(double x1, double x2) {
+    return x1 + x2;
+}
+ 
+public double summa(double y1, int y2) {
+    return y1 + y2;
+}
+так же будет работать.
+
+public double summa(double x1, double x2) {
+    return x1 + x2;
+}
+ 
+public double summa(double y1, double y2) {
+    return y1 + y2;
+}
+это работать не будет, тк имя параметра не имеет значние.
+Тип возвращаемого значения:
+Тип возвращаемого значения должен совпадать с указанным в методе. Если параметры разных типов, то в некоторых случаях нужно использовать привидение к одному типу,
+с некоторыми параметрами работает автоматически
+
+public double summa(char x1, double x2) {
+    return x1 + x2;
+} - будет работать
+
+public char summa(char x1, double x2) {
+    return x1 + x2;
+}-работать не будет, выдаст ошибку Type mismatch: cannot convert from double to char. Нужно возвращать return (char) (x1 + x2);
+
+Модификатора доступа:
+При вызове метода из другого класса с модификатором Private, компилятор выдает ошибку что не видит его.
+При попытке высова медота из другого класса System.out.print(Test.summa(1.1,1.2)); - выдает ошибку, -cannot make static reference to non-static method java
+Нужно сделать наш метод static
+
+public static double summa(double x1, double x2) {
+    return x1 + x2;
+}
+
+Переопределение метода.
+Все впринципе похоже.Имя переопределяемого должено в точности совпадать с методом который переопределяют — название, возвращаемое значение и список параметров.
+С модификаторами делал проверку на примере 5ого домашнего, с переопределенным toSring(){}
+Он может быть только public, с остальными модификаторами выдает ошибку - cannot reduce the visibility of the inherited method from object
+
+public class Text {
+
+	public static void main(String[] args){
+			
+
+	}
+	public final(или static) double summa(double x1, double x2) {
+	    return x1 + x2;
+	}
+
+}
+
+  class Text2 extends Text{
+	  
+	 public double summa(double x1, double x2) {
+		    return x1*x2;
+		}
+  } - не работает, выдает ошибку, что не может переопределить ни от static ни от final метода. С перегрузкой работает нормально
