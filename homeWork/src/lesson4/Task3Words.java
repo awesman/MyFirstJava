@@ -20,6 +20,8 @@ public class Task3Words {
           for(int i=0; i<words.length;i++){
         	  for(int j=0; j<consonant.length;j++){
         		  if(words[i].length()==n){
+        			  words[i]=words[i+1];
+    				  i++;
         			  if(words[i].charAt(0)==consonant[j]){
         				  words[i]=words[i+1];
         				  i++;
@@ -30,7 +32,7 @@ public class Task3Words {
         	  System.out.print(words[i]+" ");
 		  }
          
-          
+        
 		read.close();
 	}
 
