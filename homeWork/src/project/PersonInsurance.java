@@ -2,36 +2,28 @@ package project;
 
 public class PersonInsurance extends Insurance {
 	
-	private String InsuranceName;
-	private int InsuranceTime;
-	
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String insuranceName;
+	private int insuranceTime;
+		
 	public PersonInsurance(int insuranceYearCost, int insuranceRisk,String InsuranceName, int InsuranceTime) {
 		super(insuranceYearCost, insuranceRisk);
-		this.InsuranceName=InsuranceName;
-		this.InsuranceTime=InsuranceTime;	
+		this.insuranceName=InsuranceName;
+		this.insuranceTime=InsuranceTime;	
 	}
-
-
 	public String getInsuranceName() {
-		return InsuranceName;
+		return insuranceName;
 	}
-
-
 	public void setInsuranceName(String insuranceName) {
-		InsuranceName = insuranceName;
+		this.insuranceName = insuranceName;
 	}
-
-
 	public int getInsuranceTime() {
-		return InsuranceTime;
+		return insuranceTime;
 	}
-
-
 	public void setInsuranceTime(int insuranceTime) {
-		InsuranceTime = insuranceTime;
+		this.insuranceTime = insuranceTime;
 	}
-	
-	
-
 }

@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class AutoInsurance extends PersonInsurance implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2L;
 	private String carMark;
 	
@@ -14,15 +11,12 @@ public class AutoInsurance extends PersonInsurance implements Serializable{
 		super(insuranceYearCost, insuranceRisk, InsuranceName,InsuranceTime);
 		this.carMark=carMark;
 		}
-
 	public String getCarMark() {
 		return carMark;
 	}
-
 	public void setCarMark(String carMark) {
 		this.carMark = carMark;
 	}
-
 	@Override
 	public String toString() {
 		return "Страхование автомобиля: Стоимость страховки=" + getInsuranceCost()
@@ -31,6 +25,4 @@ public class AutoInsurance extends PersonInsurance implements Serializable{
 				+ ", Марка автомобиля=" + getCarMark()
 				+ ", Страховые риски(%)=" + getInsuranceRisk();
 	} 
-	
-	
 }

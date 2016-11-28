@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 public class PropertyInsurance extends CompanyInsurance implements Serializable{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	private int propertyPrice;
 
@@ -14,15 +11,12 @@ public class PropertyInsurance extends CompanyInsurance implements Serializable{
 		super(insuranceYearCost, insuranceRisk, bonus, companyName);
 		this.propertyPrice=propertyPrice;
 	}
-
 	public int getPropertyPrice() {
 		return propertyPrice;
 	}
-
 	public void setPropertyPrice(int propertyPrice) {
 		this.propertyPrice = propertyPrice;
 	}
-
 	@Override
 	public String toString() {
 		return "Страховка имущества: Стоимость страховки="
@@ -32,7 +26,4 @@ public class PropertyInsurance extends CompanyInsurance implements Serializable{
 				+ getPropertyPrice() + ", Страховые риски%()="
 				+ getInsuranceRisk();
 	}
-	
-	
-
 }
