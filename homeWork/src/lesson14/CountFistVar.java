@@ -1,4 +1,8 @@
 package lesson14;
+/**
+ *@author Pavel
+ *@version 1
+ */
 
 public class CountFistVar {
 
