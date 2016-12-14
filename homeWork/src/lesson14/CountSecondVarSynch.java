@@ -30,7 +30,6 @@ class NewThread extends Thread {
 	@Override
 	public void run() {
 		synchronized (o) {
-			// Cделал немного другой вывод
 			for (int i = 0; i < 10; i++) {
 				System.out.println(th.getName() + ":" + " "
 						+ (i * 10 + 1) + " " + (i * 10 + 2) + " "
