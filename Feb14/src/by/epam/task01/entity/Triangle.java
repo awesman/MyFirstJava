@@ -1,8 +1,9 @@
 package by.epam.task01.entity;
 
 import by.epam.task01.keeping.TriangleKeeping;
+import by.epam.task01.observer.Observable;
 
-public class Triangle {
+public class Triangle implements Observable {
 
 	private TriangleKeeping observer =
 			TriangleKeeping.getInstance();
@@ -45,6 +46,7 @@ public class Triangle {
 		notifyObserver();
 	}
 
+	@Override
 	public void notifyObserver() {
 		observer.processTriangle(this);
 	}
