@@ -1,23 +1,36 @@
 package by.epam.task01.entity;
 
-import by.epam.task01.keeping.TriangleKeeping;
-import by.epam.task01.observer.Observable;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Triangle implements Observable {
+import by.epam.task01.logic.TriangleActions;
+import by.epam.task01.observer.TriangleObserver;
 
-	private TriangleKeeping observer =
-			TriangleKeeping.getInstance();
+public class Triangle {
+
+	private int id;
 	private Point a;
 	private Point b;
 	private Point c;
-
-	public Triangle(Point a, Point b, Point c) {
-		super();
+	private List<TriangleObserver> observerList = new ArrayList<>();
+	
+	public Triangle(int id,Point a, Point b, Point c) {
+		this.id = id;
 		this.a = a;
 		this.b = b;
 		this.c = c;
-		notifyObserver();
+		TriangleActions.trianglePerimeter(this);
+		TriangleActions.triangleSquare(this);	
 	}
+	
+	public void addObserver(TriangleObserver observer) {
+        observerList.add(observer);
+    }
+	
+	
+	public int getId() {
+        return id;
+    }
 
 	public Point getA() {
 		return a;
@@ -25,7 +38,6 @@ public class Triangle implements Observable {
 
 	public void setA(Point a) {
 		this.a = a;
-		notifyObserver();
 	}
 
 	public Point getB() {
@@ -34,7 +46,7 @@ public class Triangle implements Observable {
 
 	public void setB(Point b) {
 		this.b = b;
-		notifyObserver();
+
 	}
 
 	public Point getC() {
@@ -43,18 +55,29 @@ public class Triangle implements Observable {
 
 	public void setC(Point c) {
 		this.c = c;
-		notifyObserver();
 	}
 
-	@Override
-	public void notifyObserver() {
-		observer.processTriangle(this);
-	}
 
 	@Override
 	public String toString() {
 		return String.format("A %s,B %s,C %s cteate a triangle",
 				a, b, c);
 	}
+	
+	 @Override
+	    public boolean equals(Object obj) {
+	        if (obj == null)
+	            return false;
+	        if (obj == this)
+	            return true;
+	        if (obj.getClass() == this.getClass()) {
+	            Triangle triangle = (Triangle) obj;
+	            if (triangle.id == this.id && triangle.a.equals(this.a)
+	                    && triangle.b.equals(this.b)
+	                    && triangle.c.equals(this.c))
+	                return true;
+	        }
+	        return false;
+	    }
 
 }

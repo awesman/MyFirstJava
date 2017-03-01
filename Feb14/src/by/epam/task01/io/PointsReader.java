@@ -12,21 +12,20 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 public class PointsReader {
-	
-	public static List<String> pointsInput(String path){
-		
-		final Logger logger = LogManager.getLogger(PointsReader.class);
-		
-		List<String> pointsList=new ArrayList<>();
-		
+
+	private static final Logger LOGGER = LogManager.getLogger();
+
+	public static List<String> pointsInput(String path) {
+
+		List<String> pointsList = new ArrayList<>();
+
 		try {
-			pointsList=Files.readAllLines(Paths.get(path), StandardCharsets.UTF_8);
-			logger.log(Level.INFO, "Data reading successfull!");
+			pointsList = Files.readAllLines(Paths.get(path),
+					StandardCharsets.UTF_8);
+			LOGGER.log(Level.INFO, "Data reading successfull!");
 		} catch (IOException e) {
-			logger.log(Level.ERROR, "IOException", e);
+			LOGGER.log(Level.ERROR, "IOException", e);
 		}
-		return pointsList;	
+		return pointsList;
 	}
 }
-
-
