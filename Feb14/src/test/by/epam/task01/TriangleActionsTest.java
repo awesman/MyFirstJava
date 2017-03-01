@@ -38,8 +38,8 @@ public class TriangleActionsTest {
 	public void testTrianglePerimeter() {
 		Perimeter trianglePerimeter =
 				TriangleActions.trianglePerimeter(triangle);
-		double perimetr = trianglePerimeter.getPerimeter(id);
-		Assert.assertEquals(12, perimetr, 0.0001);
+		double perimeter = trianglePerimeter.getPerimeter(id);
+		Assert.assertEquals(12, perimeter, 0.0001);
 	}
 
 	@Test
