@@ -1,0 +1,6 @@
+CityTaxi 13600,400,5,SEDAN_TAXI
+cars cars cars
+Autobus 42100,1200,33,SUBURBAN_TAXI
+
+
+CargoTaxi 27000,1600,3,MEDIUM
