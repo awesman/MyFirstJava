@@ -1,0 +1,14 @@
+ship:25 15 16
+ship:17 11 12
+wrong line
+ship:32 19 25
+ship:10 0 5
+ship:33 10 20
+wrong line
+ship:10 14 11
+ship:13 22 20
+ship:15 5 22
+wrong line
+ship:14 20 15
+ship:9 10 29
+ship:12 27 22
