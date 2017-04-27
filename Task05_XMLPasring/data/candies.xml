@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<candies xmlns="http://www.example.com/candies">
+    <candy id="Candy_1">
+        <name>Aeroflot</name>
+        <energy>543</energy>
+        <type>chocolate</type>
+        <chocolate>
+            <sugar weight="1900"/>
+            <powdered_milk weight="850"/>
+            <cocoa>10</cocoa>
+        </chocolate>
+        <calories>
+            <protein>3.9</protein>
+            <fat>33.7</fat>
+            <carbohydrate>58</carbohydrate>
+        </calories>
+        <production>Spartak</production>
+    </candy>
+    <candy id="Candy_2">
+        <name>Belarusian</name>
+        <energy>530</energy>
+        <type>chocolate</type>
+        <chocolate>
+            <sugar weight="2000"/>
+            <powdered_milk weight="1100"/>
+            <cocoa>13</cocoa>
+        </chocolate>
+        <calories>
+            <protein>7.1</protein>
+            <fat>31.1</fat>
+            <carbohydrate>54.6</carbohydrate>
+        </calories>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="Candy_3">
+        <name>Butt cream</name>
+        <energy>358</energy>
+        <type>cream</type>
+        <cream>
+            <sugar weight="3500"/>
+            <condensed_milk weight="4900"/>
+            <butter>8</butter>
+        </cream>
+        <calories>
+            <protein>2.7</protein>
+            <fat>4.3</fat>
+            <carbohydrate>82</carbohydrate>
+        </calories>
+        <production>Voznesensk food factory</production>
+    </candy>
+    <candy id="Candy_4">
+        <name>Tomboy</name>
+        <energy>537</energy>
+        <type>caramel</type>
+        <caramel>
+            <sugar weight="1000"/>
+            <cocoa>5</cocoa>
+            <nut>5</nut>
+        </caramel>
+        <calories>
+            <protein>10.3</protein>
+            <fat>34.8</fat>
+            <carbohydrate>45.2</carbohydrate>
+        </calories>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="Candy_5">
+        <name>Frutomelka</name>
+        <energy>376</energy>
+        <type>caramel</type>
+        <caramel>
+            <sugar weight="90000"/>
+            <cocoa>10</cocoa>
+            <nut>9</nut>
+        </caramel>
+        <calories>
+            <protein>0.2</protein>
+            <fat>0.2</fat>
+            <carbohydrate>92.9</carbohydrate>
+        </calories>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="Candy_6">
+        <name>Alenka</name>
+        <energy>415</energy>
+        <type>chocolate</type>
+        <chocolate>
+            <sugar weight="2500"/>
+            <powdered_milk weight="2500"/>
+            <cocoa>20</cocoa>
+        </chocolate>
+        <calories>
+            <protein>2.6</protein>
+            <fat>11.5</fat>
+            <carbohydrate>74</carbohydrate>
+        </calories>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="Candy_7">
+        <name>Trufel</name>
+        <energy>569</energy>
+        <type>chocolate</type>
+        <chocolate>
+            <sugar weight="2467"/>
+            <powdered_milk weight="2134"/>
+            <cocoa>19</cocoa>
+        </chocolate>
+        <calories>
+            <protein>4.0</protein>
+            <fat>39.3</fat>
+            <carbohydrate>51.4</carbohydrate>
+        </calories>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="Candy_8">
+        <name>Milashka</name>
+        <energy>533</energy>
+        <type>chocolate</type>
+        <chocolate>
+            <sugar weight="1000"/>
+            <powdered_milk weight="2934"/>
+            <cocoa>19</cocoa>
+        </chocolate>
+        <calories>
+            <protein>7.6</protein>
+            <fat>31.1</fat>
+            <carbohydrate>56.1</carbohydrate>
+        </calories>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="Candy_9">
+        <name>Sufle</name>
+        <energy>358</energy>
+        <type>cream</type>
+        <cream>
+            <sugar weight="4500"/>
+            <condensed_milk weight="2970"/>
+            <butter>5</butter>
+        </cream>
+        <calories>
+            <protein>2.6</protein>
+            <fat>18</fat>
+            <carbohydrate>60.8</carbohydrate>
+        </calories>
+        <production>Kommunarka</production>
+    </candy>
+    <candy id="Candy_10">
+        <name>Korovka</name>
+        <energy>351</energy>
+        <type>cream</type>
+        <cream>
+            <sugar weight="4500"/>
+            <condensed_milk weight="2970"/>
+            <butter>5</butter>
+        </cream>
+        <calories>
+            <protein>2.7</protein>
+            <fat>4.4</fat>
+            <carbohydrate>82.4</carbohydrate>
+        </calories>
+        <production>Spartak</production>
+    </candy>
+    <candy id="Candy_11">
+        <name>Lunariya</name>
+        <energy>550</energy>
+        <type>cream</type>
+        <cream>
+            <sugar weight="3400"/>
+            <condensed_milk weight="1970"/>
+            <butter>18</butter>
+        </cream>
+        <calories>
+            <protein>5</protein>
+            <fat>38</fat>
+            <carbohydrate>47</carbohydrate>
+        </calories>
+        <production>Spartak</production>
+    </candy>
+    <candy id="Candy_12">
+        <name>Kapri</name>
+        <energy>393</energy>
+        <type>caramel</type>
+        <caramel>
+            <sugar weight="80000"/>
+            <cocoa>1</cocoa>
+            <nut>1</nut>
+        </caramel>
+        <calories>
+            <protein>0.5</protein>
+            <fat>4.9</fat>
+            <carbohydrate>84.5</carbohydrate>
+        </calories>
+        <production>Roshen</production>
+    </candy>
+    <candy id="Candy_13">
+        <name>Korovka</name>
+        <energy>373</energy>
+        <type>cream</type>
+        <cream>
+            <sugar weight="4500"/>
+            <condensed_milk weight="2970"/>
+            <butter>5</butter>
+        </cream>
+        <calories>
+            <protein>2.66</protein>
+            <fat>4.25</fat>
+            <carbohydrate>81.2</carbohydrate>
+        </calories>
+        <production>Roshen</production>
+    </candy>
+    <candy id="Candy_14">
+        <name>Chocolate castle</name>
+        <energy>533</energy>
+        <type>chocolate</type>
+        <chocolate>
+            <sugar weight="1000"/>
+            <powdered_milk weight="458"/>
+            <cocoa>30</cocoa>
+        </chocolate>
+        <calories>
+            <protein>4.6</protein>
+            <fat>30.1</fat>
+            <carbohydrate>60.2</carbohydrate>
+        </calories>
+        <production>Roshen</production>
+    </candy>
+    <candy id="Candy_15">
+        <name>Impresso</name>
+        <energy>570</energy>
+        <type>chocolate</type>
+        <chocolate>
+            <sugar weight="1700"/>
+            <powdered_milk weight="418"/>
+            <cocoa>28</cocoa>
+        </chocolate>
+        <calories>
+            <protein>7.5</protein>
+            <fat>40</fat>
+            <carbohydrate>46</carbohydrate>
+        </calories>
+        <production>Spartak</production>
+    </candy>
+    <candy id="Candy_16">
+        <name>Kapriz mini</name>
+        <energy>392</energy>
+        <type>caramel</type>
+        <caramel>
+            <sugar weight="98000"/>
+            <cocoa>0</cocoa>
+            <nut>0</nut>
+        </caramel>
+        <calories>
+            <protein>0</protein>
+            <fat>0</fat>
+            <carbohydrate>98</carbohydrate>
+        </calories>
+        <production>Voznesensk food factory</production>
+    </candy>
+</candies>

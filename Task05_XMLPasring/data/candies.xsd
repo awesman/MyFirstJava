@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns:tns="http://www.example.com/candies"
+        xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/candies"
+        elementFormDefault="qualified">
+    <element name="candies">
+        <complexType>
+            <sequence>
+                <element name="candy"
+                         type="tns:Candy"
+                         minOccurs="1"
+                         maxOccurs="unbounded">
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+    <complexType name="Candy">
+        <sequence>
+            <element name="name">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[A-Z][\w\s]+\w"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="energy">
+                <simpleType>
+                    <restriction base="unsignedShort">
+                        <pattern value="\d{1,3}"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="type">
+                <simpleType>
+                    <restriction base="string">
+                        <enumeration value="chocolate"/>
+                        <enumeration value="cream"/>
+                        <enumeration value="caramel"/>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element ref="tns:ingredients"/>
+            <element name="calories">
+                <complexType>
+                    <sequence>
+                        <element name="protein">
+                            <simpleType>
+                                <restriction base="double">
+                                    <minInclusive value="0"/>
+                                    <maxInclusive value="100"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="fat">
+                            <simpleType>
+                                <restriction base="double">
+                                    <minInclusive value="0"/>
+                                    <maxInclusive value="100"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                        <element name="carbohydrate">
+                            <simpleType>
+                                <restriction base="double">
+                                    <minInclusive value="0"/>
+                                    <maxInclusive value="100"/>
+                                </restriction>
+                            </simpleType>
+                        </element>
+                    </sequence>
+                </complexType>
+            </element>
+            <element name="production">
+                <simpleType>
+                    <restriction base="string">
+                        <pattern value="[A-Z][\w\s]+\w"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="id" type="ID"/>
+    </complexType>
+    <complexType name="Ingredients">
+        <sequence>
+            <element name="sugar">
+                <complexType>
+                    <attribute name="weight" type="positiveInteger" default="1000" use="optional"/>
+                </complexType>
+            </element>
+        </sequence>
+    </complexType>
+    <complexType name="Chocolate">
+        <complexContent>
+            <extension base="tns:Ingredients">
+                <sequence>
+                    <element name="powdered_milk">
+                        <complexType>
+                            <attribute name="weight" type="unsignedShort" use="required"/>
+                        </complexType>
+                    </element>
+                    <element name="cocoa" type="unsignedShort"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Cream">
+        <complexContent>
+            <extension base="tns:Ingredients">
+                <sequence>
+                    <element name="condensed_milk">
+                        <complexType>
+                            <attribute name="weight" type="unsignedShort" use="optional"/>
+                        </complexType>
+                    </element>
+                    <element name="butter" type="unsignedShort"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <complexType name="Caramel">
+        <complexContent>
+            <extension base="tns:Ingredients">
+                <sequence>
+                    <element name="cocoa" type="unsignedShort"/>
+                    <element name="nut" type="unsignedShort"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+    <element name="ingredients" type="tns:Ingredients" abstract="true"></element>
+    <element name="chocolate_ingredients" type="tns:Chocolate" substitutionGroup="tns:ingredients"></element>
+    <element name="creamy_ingredients" type="tns:Cream" substitutionGroup="tns:ingredients"></element>
+    <element name="caramel_ingredients" type="tns:Caramel" substitutionGroup="tns:ingredients"></element>
+</schema>
